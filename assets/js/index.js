@@ -33,7 +33,7 @@ const hideItem = (data, className = activeClassName) => {
     }
 }
 
-const accordeonFunc = (item, className) => {
+const accordeonFunc = (item, className = activeClassName) => {
     if (!item.classList.contains(className)) {
         showItem(item);
     } else {
@@ -51,4 +51,18 @@ sidebarCloseButton.addEventListener("click", () => {
 
 overlay.addEventListener("click", () => {
     hideItem("all");
+});
+
+let sidebarNavAccordeon = document.querySelectorAll(".sidebar__nav-item");
+
+sidebarNavAccordeon.forEach((accordeon) => {
+    accordeon.addEventListener('click', () => {
+        sidebarNavAccordeon.forEach((item) => {
+            if (item.classList.contains(activeClassName) || accordeon.classList.contains(activeClassName)) {
+                hideItem([item, accordeon]);
+            } else {
+                showItem(accordeon);
+            }
+        });
+    });
 });

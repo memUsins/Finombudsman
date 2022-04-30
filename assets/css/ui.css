@@ -1,7 +1,7 @@
 /* ui */
 
 h1 {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 46px;
@@ -9,7 +9,7 @@ h1 {
 }
 
 h2 {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -17,7 +17,7 @@ h2 {
 }
 
 h3 {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -25,7 +25,7 @@ h3 {
 }
 
 h4 {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -33,7 +33,7 @@ h4 {
 }
 
 h5 {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -41,7 +41,7 @@ h5 {
 }
 
 h6 {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -49,7 +49,7 @@ h6 {
 }
 
 p {
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -58,6 +58,8 @@ p {
 
 input,
 button,
+.button,
+.button_main::after,
 a,
 .link,
 .bar__container * {
@@ -78,7 +80,7 @@ a:hover,
     color: var(--color__text_4);
     border-radius: 5px;
 
-    font-family: 'Exo2';
+    font-family: 'Exo 2';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -92,21 +94,34 @@ a:hover,
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    position: relative;
 }
 
 .button_main {
     background: var(--color_linear_active);
 }
 
-.button_main:hover {
+.button_main::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
     background: var(--color_linear_active_hover);
+    opacity: 0;
+    position: absolute;
+}
+
+.button_main:hover::after {
+    opacity: 1;
 }
 
 /* overlay */
 
 .overlay {
     position: fixed;
-    margin-top: -100%;
+    margin-left: -100%;
     width: 100%;
     height: 100%;
     top: 0;
@@ -118,5 +133,5 @@ a:hover,
 }
 
 .overlay.active {
-    margin-top: 0;
+    margin-left: 0;
 }
