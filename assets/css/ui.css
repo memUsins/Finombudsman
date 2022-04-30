@@ -56,6 +56,12 @@ p {
     line-height: 175%;
 }
 
+.text_active {
+    color: var(--color_main-light_1);
+}
+
+/* Forms */
+
 input,
 button,
 .button,
@@ -69,8 +75,9 @@ a,
 input:hover,
 button:hover,
 a:hover,
-.link,
-.overlay {
+.link:hover,
+.overlay:hover,
+.play__container:hover {
     cursor: pointer;
 }
 
@@ -110,11 +117,22 @@ a:hover,
     border-radius: 5px;
     background: var(--color_linear_active_hover);
     opacity: 0;
+    z-index: 0;
     position: absolute;
 }
 
 .button_main:hover::after {
     opacity: 1;
+}
+
+.button_main span {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 171.4%;
+    text-transform: uppercase;
+    z-index: 1;
 }
 
 /* overlay */
@@ -130,8 +148,43 @@ a:hover,
     background-color: #10322C;
     mix-blend-mode: multiply;
     opacity: 0.6;
+    z-index: 10;
 }
 
 .overlay.active {
     margin-left: 0;
+}
+
+.modal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    margin: auto;
+    margin-bottom: auto;
+    top: 0;
+    left: -200%;
+    bottom: 0;
+    right: 0;
+    transition: 0.6s ease-in-out;
+    z-index: 11;
+}
+
+.modal.active {
+    left: 0;
+}
+
+.modal__close {
+    position: absolute;
+    top: 20px;
+    right: -100%;
+    transition: 0.6s ease-in-out;
+    z-index: 11;
+}
+
+.modal__close.active {
+    right: 20px;
+}
+
+.modal__close .bar {
+    background: #fff;
 }

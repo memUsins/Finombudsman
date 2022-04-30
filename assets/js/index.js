@@ -1,13 +1,22 @@
 // js
 
+// Sidebar
 let sidebarOpenButton = document.querySelector(".header__sidebar-bar");
 let sidebarCloseButton = document.querySelector(".sidebar__bar");
 let sidebar = document.querySelector(".sidebar");
+
+// Youtube Modal
+let welcomeModalButton = document.querySelector(".welcome-screen__player-ctrl");
+let welcomeModal = document.querySelector(".youtube-modal");
+
+// Main
 let overlay = document.querySelector(".overlay");
+let modalClose = document.querySelector(".modal__close");
 
 const activeClassName = "active";
-const modalList = [sidebar, overlay];
+const modalList = [sidebar, overlay, welcomeModal, modalClose];
 
+// Main Functions
 const showItem = (data, className = activeClassName) => {
     if (Array.isArray(data)) {
         data.forEach((item) => {
@@ -17,6 +26,7 @@ const showItem = (data, className = activeClassName) => {
         data.classList.add(className);
     }
 }
+
 const hideItem = (data, className = activeClassName) => {
     if (Array.isArray(data)) {
         data.forEach((item) => {
@@ -33,14 +43,23 @@ const hideItem = (data, className = activeClassName) => {
     }
 }
 
-const accordeonFunc = (item, className = activeClassName) => {
+const accordionFunc = (item, className = activeClassName) => {
     if (!item.classList.contains(className)) {
-        showItem(item);
+        showItem([item]);
     } else {
-        hideItem(item);
+        hideItem([item]);
     }
 }
 
+overlay.addEventListener("click", () => {
+    hideItem("all");
+});
+
+modalClose.addEventListener("click", () => {
+    hideItem("all");
+});
+
+// Sidebar
 sidebarOpenButton.addEventListener("click", () => {
     showItem([sidebar, overlay]);
 });
@@ -49,20 +68,21 @@ sidebarCloseButton.addEventListener("click", () => {
     hideItem([sidebar, overlay]);
 });
 
-overlay.addEventListener("click", () => {
-    hideItem("all");
+let sidebarNavAaccordion = document.querySelectorAll(".sidebar__nav-item");
+sidebarNavAaccordion.forEach((accordion) => {
+    accordion.addEventListener('click', () => {
+        if (!accordion.classList.contains(activeClassName)) {
+            sidebarNavAaccordion.forEach((item) => {
+                hideItem([item]);
+            })
+            showItem(accordion);
+        } else {
+            accordionFunc(accordion);
+        }
+    }, false);
 });
 
-let sidebarNavAccordeon = document.querySelectorAll(".sidebar__nav-item");
-
-sidebarNavAccordeon.forEach((accordeon) => {
-    accordeon.addEventListener('click', () => {
-        sidebarNavAccordeon.forEach((item) => {
-            if (item.classList.contains(activeClassName) || accordeon.classList.contains(activeClassName)) {
-                hideItem([item, accordeon]);
-            } else {
-                showItem(accordeon);
-            }
-        });
-    });
+// Youtube
+welcomeModalButton.addEventListener("click", () => {
+    showItem([welcomeModal, modalClose, overlay]);
 });

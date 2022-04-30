@@ -29,10 +29,12 @@ body,
     align-items: center;
     justify-content: start;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 body {
     background-color: var(--color__text_5);
+    position: relative;
 }
 
 .container {
@@ -68,7 +70,8 @@ body {
 
 .header__logo-icon {
     width: 50px;
-    height: 50px;
+    height: auto;
+    margin-right: 5px;
 }
 
 .header__company-name {
@@ -196,16 +199,6 @@ body {
     height: 40px;
 }
 
-.header__button span {
-    font-family: 'Exo 2';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 171.4%;
-    text-transform: uppercase;
-    z-index: 1;
-}
-
 /* Localization */
 
 .header__localization {
@@ -261,10 +254,6 @@ body {
     bottom: 0;
 }
 
-.bar__container:hover .bar {
-    background: var(--color_main-light_1);
-}
-
 .bar__container.active .bar_middle {
     opacity: 0;
 }
@@ -292,7 +281,7 @@ body {
     top: 0;
     left: 0;
     transition: 0.5s ease-in-out;
-    z-index: 1;
+    z-index: 11;
     background: var(--color_main-light_2);
     display: flex;
     justify-content: flex-start;
@@ -549,4 +538,181 @@ body {
     font-size: 12px;
     line-height: 140%;
     color: var(--color__text_4);
+}
+
+/* Screens */
+
+.screen {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.screen_padding {
+    padding: 50px;
+}
+
+.screen_grid-total {
+    max-width: var(--grid__total);
+}
+
+.screen_grid__page-total {
+    max-width: var(--grid__page-total);
+}
+
+.screen_gradient_blue {
+    background: var(--color_linear_component);
+}
+
+
+
+/* First */
+
+.welcome-screen {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.welcome-screen__info {
+    max-width: 660px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.welcome-screen__info h1 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 45px;
+    line-height: 110%;
+    color: var(--color__text_1);
+}
+
+.welcome-screen__info h3 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 120%;
+    color: var(--color__text_1);
+    margin: 5px 0 30px 0;
+}
+
+.welcome-screen__info p {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150.5%;
+    color: var(--color__text_3);
+    opacity: 0.8;
+}
+
+.welcome-screen__info-footer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.welcome-screen__info-button {
+    max-width: 230px;
+    width: 100%;
+    height: 60px;
+}
+
+.welcome-screen__img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    mix-blend-mode: darken;
+}
+
+/* Play button */
+
+.play__container {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 1px solid var(--color_light_0);
+    position: relative;
+}
+
+.play__circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    background: var(--color_linear_active);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.play__triangle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1;
+    width: 13px;
+    height: 12px;
+}
+
+.play__circle_small {
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: var(--color_linear_active);
+    position: absolute;
+    top: 6px;
+    left: 5px;
+}
+
+.welcome-screen__player-ctrl {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.welcome-screen__player-ctrl__annotation {
+    max-width: 160px;
+    width: 100%;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--color__text_3)
+}
+
+.welcome-screen__player-ctrl:hover .welcome-screen__player-ctrl__annotation {
+    text-decoration-line: underline;
+}
+
+/* Youtube */
+
+.youtube-modal,
+.youtube-modal iframe {
+    max-width: 800px;
+    width: 100%;
+    max-height: 400px;
+    height: 100%;
+}
+
+.modal__close-bar {
+    width: 25px;
+    height: 25px;
 }
