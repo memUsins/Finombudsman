@@ -1,1 +1,32 @@
 /* var */
+
+:root {
+    --grid__total: 1240px;
+    --grid__page-total: 1920px;
+    --grid__page-total: 1920px;
+
+    --color_light_0: #DCBFA6;
+    --color_light_1: #EFE0D3;
+
+    --color_main-light_0: #008675;
+    --color_main-light_1: #13836F;
+    --color_main-light_2: #EDF5F4;
+
+    --color_gray-light_0: #768692;
+    --color_gray-light_1: #D2D6D6;
+
+    --color_linear_component: linear-gradient(96.32deg, #E6F9F6 12.32%, #F8F8F8 88.15%);
+    --color_linear_active: linear-gradient(90.62deg, #E6D0BB 1.36%, #EDD5BC 103.37%);
+    --color_linear_active_hover: linear-gradient(90.62deg, #D7BA9D 1.36%, #EDD5BC 103.37%);
+
+    --color_danger: #ED0A34;
+    --color_success: #3DCE8F;
+    --color_warning: #FA784A;
+
+    --color__text_0: #352F2A;
+    --color__text_1: #4E4E4E;
+    --color__text_2: #37474F;
+    --color__text_3: #455A64;
+    --color__text_4: #686868;
+    --color__text_5: #ffffff;
+}

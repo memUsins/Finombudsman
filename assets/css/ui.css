@@ -1,1 +1,122 @@
 /* ui */
+
+h1 {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    line-height: 125.4%;
+}
+
+h2 {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 125%;
+}
+
+h3 {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 125%;
+}
+
+h4 {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 125%;
+}
+
+h5 {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 125%;
+}
+
+h6 {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 175%;
+}
+
+p {
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 175%;
+}
+
+input,
+button,
+a,
+.link,
+.bar__container * {
+    transition: 0.3s ease-in-out;
+}
+
+input:hover,
+button:hover,
+a:hover,
+.link,
+.overlay {
+    cursor: pointer;
+}
+
+.input {
+    padding: 10px 15px;
+    background-color: var(--color_main-light_2);
+    color: var(--color__text_4);
+    border-radius: 5px;
+
+    font-family: 'Exo2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.button {
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button_main {
+    background: var(--color_linear_active);
+}
+
+.button_main:hover {
+    background: var(--color_linear_active_hover);
+}
+
+/* overlay */
+
+.overlay {
+    position: fixed;
+    margin-top: -100%;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease-in-out;
+    background-color: #10322C;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+}
+
+.overlay.active {
+    margin-top: 0;
+}

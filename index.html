@@ -5,11 +5,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>Finombudsman</title>
+
+    <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
 <body>
-    Hello World
+    <div class="container">
+        <div class="header">
+
+            <!-- Sidebar Container -->
+            <div class="sidebar">
+                <!-- Sidebar close button -->
+                <div class="sidebar__bar bar__container active link">
+                    <div class="bar bar_top"></div>
+                    <div class="bar bar_middle"></div>
+                    <div class="bar bar_bottom"></div>
+                </div>
+                content
+            </div>
+
+            <!-- Header Sidebar open button -->
+            <div class="header__sidebar-bar bar__container link">
+                <div class="bar bar_top"></div>
+                <div class="bar bar_middle"></div>
+                <div class="bar bar_bottom"></div>
+            </div>
+
+            <!-- Header Logo -->
+            <div class="header__logo">
+                <div class="header__logo-row">
+                    <object data="./assets/icons/logo.svg" type="image/svg+xml" class="header__logo-icon">
+                        <img src="./assets/icons/logo.svg" alt="Company name" class="header__logo-icon">
+                    </object>
+                    <a href="" class="header__company-name">финансовый уполномоченный</a>
+                </div>
+                <p class="header__company-title">Быстро. Бесплатно. Справедливо</p>
+            </div>
+
+            <!-- Header search -->
+            <form class="header__search">
+                <input type="text" placeholder="Поиск по сайту" class="header__search-input input">
+                <button class="header__search-btn">
+                    <img src="./assets/icons/search.svg" alt="Найти" class="header__search-btn__icon">
+                </button>
+            </form>
+
+            <!-- Header phone -->
+            <div class="header__phone">
+                <object data="./assets/icons/phone.svg" type="image/svg+xml" class="header__phone-icon">
+                    <img src="./assets/icons/phone.svg" alt="Найти" class="header__phone-icon">
+                </object>
+                <p class="header__phone-text">8 (800) 200-00-10</p>
+            </div>
+
+            <!-- Header Social List -->
+            <ul class="header__social">
+                <li class="header__social-item">
+                    <a href="">
+                        <img src="./assets/icons/youtube.svg" alt="Найти" class="header__social-item__icon">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a href="">
+                        <img src="./assets/icons/telegram.svg" alt="Найти" class="header__social-item__icon">
+                    </a>
+                </li>
+                <li class="header__social-item">
+                    <a href="">
+                        <img src="./assets/icons/yandex-zen.svg" alt="Найти" class="header__social-item__icon">
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Header Button -->
+            <a href="" class="header__button button button_main">Личный кабинет</a>
+
+            <!-- Language -->
+            <div class="header__localization">
+                <a href="" class="header__localization-item active">RU</a>
+                <p>|</p>
+                <a href="" class="header__localization-item">EN</a>
+            </div>
+
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <script src="./assets/js/index.js"></script>
 </body>
 
 </html>
