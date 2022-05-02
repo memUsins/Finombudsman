@@ -92,7 +92,7 @@ small,
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 125%;
 }
 
@@ -184,11 +184,25 @@ small,
     margin-bottom: 10px;
 }
 
-.content__section ul li::before {
-    content: url("./../icons/dot.svg");
-    display: block;
+.content__section ul li::before,
+.list_dot::before {
+    content: ' ';
     float: left;
     margin-right: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content__section ul li::before {
+    background: var(--color_main-light_1);
+}
+
+.list_dot::before {
+    background: var(--color__text_4);
 }
 
 .content__section ul li p:last-child,
