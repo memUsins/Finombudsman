@@ -1,14 +1,16 @@
 /* ui */
 
-h1 {
+h1,
+.h1 {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 46px;
-    line-height: 125.4%;
+    line-height: 125%;
 }
 
-h2 {
+h2,
+.h2 {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
@@ -16,7 +18,8 @@ h2 {
     line-height: 125%;
 }
 
-h3 {
+h3,
+.h3 {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
@@ -24,7 +27,8 @@ h3 {
     line-height: 125%;
 }
 
-h4 {
+h4,
+.h4 {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
@@ -32,7 +36,8 @@ h4 {
     line-height: 125%;
 }
 
-h5 {
+h5,
+.h5 {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
@@ -40,25 +45,192 @@ h5 {
     line-height: 125%;
 }
 
-h6 {
+h6,
+.h6 {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
+    line-height: 125%;
+}
+
+.h7 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 125%;
+}
+
+.h8 {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 125%;
+}
+
+.big {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
     line-height: 175%;
 }
 
-p {
+p,
+.p {
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
-    line-height: 175%;
+    line-height: 150%;
+}
+
+small,
+.small {
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 125%;
 }
 
 .text_active {
     color: var(--color_main-light_1);
 }
+
+.text_bold {
+    font-weight: bold;
+}
+
+.text_normal {
+    font-weight: normal;
+}
+
+.text_light {
+    font-weight: 400;
+}
+
+.text_underline {
+    text-decoration: underline;
+}
+
+.text_uppercase {
+    text-transform: uppercase;
+}
+
+.text_center {
+    text-align: center;
+}
+
+.text_light-gray {
+    color: var(--color__text_4);
+    opacity: 0.8;
+}
+
+.text_white {
+    color: var(--color__text_5);
+}
+
+.text_black,
+.content__section h1,
+.content__section .h1,
+.content__section h2,
+.content__section .h2,
+.content__section h3,
+.content__section .h3,
+.content__section h4,
+.content__section .h4,
+.content__section h5,
+.content__section .h5,
+.content__section h6,
+.content__section .h6,
+.content__section .h7,
+.content__section .h8 {
+    color: var(--color__text_0);
+}
+
+.text_gray {
+    color: var(--color__text_3);
+}
+
+.content__section h1,
+.content__section .h1,
+.content__section h2,
+.content__section .h2,
+.content__section h3,
+.content__section .h3,
+.content__section h4,
+.content__section .h4,
+.content__section h5,
+.content__section .h5,
+.content__section h6,
+.content__section .h6,
+.content__section .h7,
+.content__section .h8,
+.content__section p,
+.content__section .p {
+    margin-bottom: 30px;
+}
+
+.content__section ol li {
+    list-style: decimal;
+    margin-left: 15px;
+}
+
+.content__section ol li,
+.content__section ul li {
+    margin-bottom: 10px;
+}
+
+.content__section ul li::before {
+    content: url("./../icons/dot.svg");
+    display: block;
+    float: left;
+    margin-right: 10px;
+}
+
+.content__section ul li p:last-child,
+.content__section ol li p:last-child {
+    margin: 0;
+}
+
+.content__section ol,
+.content__section ul {
+    margin-bottom: 20px;
+}
+
+.content__section a,
+.content__section .link {
+    color: var(--color_main-light_1);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.ls_none::before {
+    display: none !important;
+}
+
+/*  */
+
+.flex {
+    display: flex;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.ai_center {
+    align-items: center;
+}
+
+.gap_10 {
+    gap: 10px;
+}
+
+
 
 /* Forms */
 
@@ -77,14 +249,20 @@ button:hover,
 a:hover,
 .link:hover,
 .overlay:hover,
-.play__container:hover {
+.play__container:hover,
+.step-screen__list-item:hover {
     cursor: pointer;
+}
+
+.link:hover {
+    color: var(--color_main-light_1) !important;
 }
 
 .input {
     padding: 10px 15px;
     background-color: var(--color_main-light_2);
     color: var(--color__text_4);
+    border: 1px solid transparent;
     border-radius: 5px;
 
     font-family: 'Exo 2';
@@ -92,6 +270,11 @@ a:hover,
     font-weight: 400;
     font-size: 14px;
     line-height: 140%;
+}
+
+.input:focus,
+.input:hover {
+    border-color: var(--color_main-light_1)
 }
 
 .button {
@@ -104,24 +287,52 @@ a:hover,
     position: relative;
 }
 
+.button_transparent {
+    min-width: 170px;
+    width: 100%;
+    height: 60px;
+    border: 1px solid var(--color__text_4);
+    color: var(--color_main-light_1);
+}
+
+.button_transparent:hover {
+    background-color: var(--color_main-light_1);
+    color: var(--color__text_5);
+}
+
 .button_main {
     background: var(--color_linear_active);
 }
 
-.button_main::after {
+.button_main::after,
+.gradient-bg__active::after {
     content: '';
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    border-radius: 5px;
-    background: var(--color_linear_active_hover);
+    border-radius: inherit;
     opacity: 0;
     z-index: 0;
+    background: transparent;
     position: absolute;
 }
 
-.button_main:hover::after {
+.button_main::after {
+    background: var(--color_linear_active_hover);
+}
+
+.gradient-bg__active * {
+    z-index: 1;
+}
+
+.gradient-bg__active::after {
+    background: var(--color_main-light_2);
+}
+
+.button_main:hover::after,
+.gradient-bg__active:hover::after,
+.gradient-bg__active.active::after {
     opacity: 1;
 }
 
@@ -130,7 +341,6 @@ a:hover,
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
-    line-height: 171.4%;
     text-transform: uppercase;
     z-index: 1;
 }
@@ -144,7 +354,7 @@ a:hover,
     height: 100%;
     top: 0;
     left: 0;
-    transition: 0.3s ease-in-out;
+    transition: 1s ease-in-out;
     background-color: #10322C;
     mix-blend-mode: multiply;
     opacity: 0.6;
@@ -153,6 +363,7 @@ a:hover,
 
 .overlay.active {
     margin-left: 0;
+    transition: 0.3s ease-in-out;
 }
 
 .modal {
@@ -165,26 +376,41 @@ a:hover,
     left: -200%;
     bottom: 0;
     right: 0;
-    transition: 0.6s ease-in-out;
+    transition: 0.8s ease-in-out;
     z-index: 11;
 }
 
 .modal.active {
     left: 0;
+    transition: 0.5s ease-in-out;
+
 }
 
 .modal__close {
     position: absolute;
-    top: 20px;
-    right: -100%;
-    transition: 0.6s ease-in-out;
+    right: 2%;
+    top: 2%;
     z-index: 11;
+    opacity: 0;
+    transition: 1s ease-in-out;
 }
 
 .modal__close.active {
-    right: 20px;
+    opacity: 1;
+    transition: 0.3s ease-in-out;
 }
 
 .modal__close .bar {
     background: #fff;
+}
+
+/* tabs */
+
+.tabs__list-item {
+    display: none;
+    width: 100%;
+}
+
+.tabs__list-item.active {
+    display: flex;
 }
