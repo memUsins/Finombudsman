@@ -453,12 +453,16 @@ a:hover,
 
 /* tabs */
 
-.tabs__list-item {
+.tab {
+    margin-bottom: 30px;
+}
+
+.tabs__list .item {
     display: none;
     width: 100%;
 }
 
-.tabs__list-item.active {
+.tabs__list .item.active {
     display: flex;
 }
 
