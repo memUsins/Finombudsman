@@ -7,12 +7,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Личный приём</title>
+    <title>Finombudsman</title>
 
     <link rel="stylesheet" href="./../../assets/css/main.css">
 </head>
 
 <body>
+
     <div class="container">
         <!-- Header -->
         <div class="header">
@@ -240,7 +241,7 @@
                         <!-- QR -->
                         <div class="row">
                             <img src="./../../assets/img/main/qr.png" alt="qr" class="qr">
-                            <a href="" class="link">QR-код</a>
+                            <p class="link modal-open" id="qr__modal">QR-код</p>
                         </div>
 
                         <!-- Description -->
@@ -388,117 +389,145 @@
             </div>
 
         </div>
-        <!-- Content -->
 
+        <!-- Content -->
         <ul class="screen screen_grid-total breadcrumb screen_breadcrumb">
             <li class="breadcrumb__item">
                 <a href="" class="small text_light-gray link">Главная страница</a>
             </li>
             <li class="breadcrumb__item">
-                <a href="" class="small text_light-gray link">О службе</a>
+                <a href="" class="small text_light-gray link">Страница мероприятия</a>
             </li>
             <li class="breadcrumb__item">
-                <a href="" class="small text_light-gray link">Личный приём</a>
+                <a href="" class="small text_light-gray link">Выступление главного финансово уполномоченого...</a>
             </li>
         </ul>
 
         <div class="content content_with-sidebar">
 
-            <div class="content-sidebar screen_last">
-
-                <h3 class="text_active content-sidebar__title">Личный приём</h3>
-
-                <a href="" class="text_black h8 text_bold text_underline">Версия для слабовидящих</a>
-            </div>
-
-            <section class="content__section">
-                <h1>Личный <span class="text_active">приём</span></h1>
-
-                <p>Личный приём осуществляется в режиме видеосвязи с уполномоченным лицом — работником АНО «СОДФУ» — по
-                    предварительной записи.
-                    Личный приём граждан в помещениях Службы финансового уполномоченного временно приостановлен в связи
-                    с угрозой распространения коронавирусной инфекции (2019-nCoV).
-                    Записаться на личный приём в режиме видеосвязи можно через электронную форму записи на приём на
-                    официальном сайте финансового уполномоченного, нажав на кнопку «Записаться на приём».</p>
 
 
-                <div class="advertisement">
-                    <div class="icon">
-                        <img src="./../../assets/icons/advertisement.svg" alt="">
-                    </div>
-                    <div class="info">
-                        <p>Обращаем внимание, что c 1 января 2022 года вход в личный кабинет потребителя финансовых
-                            услуг на сайте финансового уполномоченного с целью записи на личный приём возможен
-                            исключительно с использованием подтверждённой учётной записи физического лица в Единой
-                            системе идентификации и аутентификации (ЕСИА).
-                            Если у вас уже есть личный кабинет на сайте финансового уполномоченного, авторизуйтесь,
-                            используя кнопку «Госуслуги Войти через ЕСИА».
-                            Если личного кабинета нет, необходимо зарегистрироваться с использованием подтверждённой
-                            учётной записи физического лица в ЕСИА.
-                            Для создания личного кабинета используйте кнопку <a class="link">«Госуслуги Войти
-                                через ЕСИА»</a>.
-                        </p>
-                        <a href="" class="button button_transparent ">Записаться на приём</a>
-                    </div>
-                </div>
-
-                <p>Рекомендуем вам заранее ознакомиться с <a href="" class="link">правилами личного приёма
-                        граждан</a>.
-                    Во вкладке «История записей» хранится информация о предстоящих и состоявшихся приёмах. При
-                    необходимости вы можете самостоятельно отменить и создать новую запись на приём, а также оценить
-                    состоявшийся приём и оставить комментарий.
-                    Записаться на личный приём можно также позвонив в контактный центр Службы финансового
-                    уполномоченного по номеру <b>8 (800) 200-00-10 </b>(понедельник — пятница с 08:00 до 20:00 по
-                    московскому
-                    времени, кроме нерабочих праздничных дней, бесплатно для звонков из регионов России).</p>
 
 
-                <h4>В ходе личного приёма можно получить консультацию по следующим вопросам:​</h4>
 
-                <ul>
-                    <li>
-                        <p>порядок оформления и подачи обращения к финансовому уполномоченному;</p>
+
+
+            <div class="screen_grid-total screen_search screen_first">
+
+                <h1>Техническая информация</h1>
+
+                <ul class="result__list">
+                    <li class="result__item">
+                        <div class="date">
+                            <img src="./../../assets/icons/calendar.svg" alt="">
+                            <small>14 декабря 2020г</small>
+                        </div>
+                        <a href="" class="title h5 link">АНО «СОДФУ» сообщает о возможных перебоях в работе личных
+                            кабинетов</a>
                     </li>
-                    <li>
-                        <p>разъяснение причин отказа в принятии обращения к рассмотрению финансовым уполномоченным;</p>
+                    <li class="result__item">
+                        <div class="date">
+                            <img src="./../../assets/icons/calendar.svg" alt="">
+                            <small>14 декабря 2020г</small>
+                        </div>
+                        <a href="" class="title h5 link">АНО «СОДФУ» сообщает о возможных перебоях в работе личных
+                            кабинетов</a>
                     </li>
-                    <li>
-                        <p>порядок и сроки рассмотрения обращения финансовым уполномоченным;
-                        </p>
+                    <li class="result__item">
+                        <div class="date">
+                            <img src="./../../assets/icons/calendar.svg" alt="">
+                            <small>14 декабря 2020г</small>
+                        </div>
+                        <a href="" class="title h5 link">АНО «СОДФУ» сообщает о возможных перебоях в работе личных
+                            кабинетов</a>
                     </li>
-                    <li>
-                        <p>порядок исполнения решения финансового уполномоченного;
-                        </p>
+                    <li class="result__item">
+                        <div class="date">
+                            <img src="./../../assets/icons/calendar.svg" alt="">
+                            <small>14 декабря 2020г</small>
+                        </div>
+                        <a href="" class="title h5 link">АНО «СОДФУ» сообщает о возможных перебоях в работе личных
+                            кабинетов</a>
                     </li>
-                    <li>
-                        <p>судебная защита прав потребителей финансовых услуг, в том числе в случае несогласия с
-                            решением финансового уполномоченного.
-                        </p>
+                    <li class="result__item">
+                        <div class="date">
+                            <img src="./../../assets/icons/calendar.svg" alt="">
+                            <small>14 декабря 2020г</small>
+                        </div>
+                        <a href="" class="title h5 link">АНО «СОДФУ» сообщает о возможных перебоях в работе личных
+                            кабинетов</a>
+                    </li>
+                    <li class="result__item">
+                        <div class="date">
+                            <img src="./../../assets/icons/calendar.svg" alt="">
+                            <small>14 декабря 2020г</small>
+                        </div>
+                        <a href="" class="title h5 link">АНО «СОДФУ» сообщает о возможных перебоях в работе личных
+                            кабинетов</a>
                     </li>
                 </ul>
-
-                <div class="advertisement">
-                    <div class="icon">
-                        <img src="./../../assets/icons/advertisement.svg" alt="">
-                    </div>
-                    <div class="info">
-                        <p>Обращаем ваше внимание, что работники АНО «СОДФУ» не дают юридических консультаций по
-                            существу спора.</span>.
-                        </p>
+                <div class="pagination">
+                    <p class="count">1-6 из 144</p>
+                    <ul class="page-list">
+                        <li class="item arrow_prev arrow disable">
+                            <a href="" class="link">
+                                <img src="./../../assets/icons/сhevron_left.svg" alt="">
+                            </a>
+                        </li>
+                        <li class="item page"><a href="" class="link">1</a></li>
+                        <li class="item page"><a href="" class="link">2</a></li>
+                        <li class="item page"><a href="" class="link">3</a></li>
+                        <li class="item page"><a href="" class="link">4</a></li>
+                        <li class="item page"><a href="" class="link">5</a></li>
+                        <li class="item page">
+                            <p>...</p>
+                        </li>
+                        <li class="item page"><a href="" class="link">24</a></li>
+                        <li class="item arrow_next arrow">
+                            <a href="" class="link">
+                                <img src="./../../assets/icons/сhevron_right.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="result-count">
+                        <p>Новостей на странице</p>
+                        <div class="dropdown">
+                            <ul class="list">
+                                <li class="item item_with-arrow ">
+                                    <input type="button" value="1" class="button">
+                                </li>
+                                <li class="item item_with-arrow">
+                                    <input type="button" value="2" class="button">
+                                </li>
+                                <li class="item item_with-arrow">
+                                    <input type="button" value="4" class="button">
+                                </li>
+                                <li class="item item_with-arrow active">
+                                    <input type="button" value="6" class="button">
+                                </li>
+                                <li class="item item_with-arrow">
+                                    <input type="button" value="8" class="button">
+                                </li>
+                                <li class="item item_with-arrow">
+                                    <input type="button" value="10" class="button">
+                                </li>
+                                <li class="item item_with-arrow">
+                                    <input type="button" value="20" class="button">
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <p>Для участия в приёме в режиме видеосвязи необходимо иметь доступ в Интернет и исправные видеокамеру,
-                    микрофон и динамики (наушники) на устройстве, с которого будет осуществляться подключение.
-                    Уведомление, содержащее гиперссылку на приём, будет направлено вам на указанную при регистрации
-                    электронную почту и в виде смс-сообщения на указанный контактный номер.
-                </p>
 
-                <a href="">
-                    Инструкция по подключению к приёму в режиме видеосвязи</a>
-            </section>
+
+
+
+
 
         </div>
+
         <!-- Footer -->
         <footer class="footer">
 
@@ -559,7 +588,7 @@
                         <!-- QR -->
                         <div class="row">
                             <img src="./../../assets/img/main/qr.png" alt="qr" class="qr">
-                            <a href="" class="link">QR-код</a>
+                            <p class="link modal-open" id="qr__modal">QR-код</p>
                         </div>
 
                         <!-- Description -->
@@ -620,7 +649,7 @@
                 </div>
 
                 <!-- Bottom -->
-                <div class=" contact__list block__third">
+                <div class="contact__list block__third">
                     <p class="main-title h7">Контакты</p>
                     <ul class="list">
                         <li class="item">
@@ -657,10 +686,16 @@
                             </small>
                         </li>
                     </ul>
+
+
                 </div>
 
             </div>
         </footer>
+    </div>
+    <div class="qr-modal modal" id="qr__modal-content">
+        <img src="./../../assets/img/main/qr_big.png" alt="" class="img">
+        <h5 class="text_active">Отсканируйте QR-код</h5>
     </div>
     <div class="overlay">
         <span class="modal__close">
@@ -671,6 +706,8 @@
             </div>
         </span>
     </div>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/css/splide-core.min.css"> -->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js"></script>
     <script src="./../../assets/js/index.js"></script>
 </body>
 

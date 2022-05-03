@@ -85,6 +85,7 @@ p,
     font-weight: 400;
     font-size: 15px;
     line-height: 150%;
+    color: var(--color__text_2);
 }
 
 small,
@@ -184,6 +185,16 @@ small,
     margin-bottom: 10px;
 }
 
+.content__section ul li {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.content__section ul li p {
+    width: 100%;
+}
+
 .content__section ul li::before,
 .list_dot::before {
     content: ' ';
@@ -220,6 +231,10 @@ small,
     color: var(--color_main-light_1);
     text-decoration: underline;
     font-weight: bold;
+}
+
+.content__section .button_transparent {
+    text-decoration: none;
 }
 
 .ls_none::before {
@@ -272,6 +287,18 @@ a:hover,
     color: var(--color_main-light_1) !important;
 }
 
+.link_next::after {
+    content: url(./../icons/arrow.svg);
+    margin-left: 10px;
+
+}
+
+.link_next {
+    text-transform: uppercase !important;
+    color: var(--color__text_0) !important;
+    font-weight: normal;
+}
+
 .input {
     padding: 10px 15px;
     background-color: var(--color_main-light_2);
@@ -292,6 +319,8 @@ a:hover,
 }
 
 .button {
+    max-width: 220px;
+    min-width: 170px;
     border-radius: 5px;
     padding: 10px;
     display: flex;
@@ -299,14 +328,17 @@ a:hover,
     align-items: center;
     flex-direction: row;
     position: relative;
+    gap: 10px;
 }
 
 .button_transparent {
+    max-width: 220px;
     min-width: 170px;
     width: 100%;
     height: 60px;
     border: 1px solid var(--color__text_4);
     color: var(--color_main-light_1);
+    font-weight: normal;
 }
 
 .button_transparent:hover {
@@ -371,13 +403,14 @@ a:hover,
     transition: 1s ease-in-out;
     background-color: #10322C;
     mix-blend-mode: multiply;
-    opacity: 0.6;
+    opacity: 0;
     z-index: 10;
 }
 
 .overlay.active {
     margin-left: 0;
     transition: 0.3s ease-in-out;
+    opacity: 0.6;
 }
 
 .modal {
@@ -427,4 +460,8 @@ a:hover,
 
 .tabs__list-item.active {
     display: flex;
+}
+
+.disable {
+    opacity: 0.5;
 }

@@ -41,7 +41,10 @@ const modal = (data) => {
     data.forEach((dataItem) => {
         let modal = document.querySelector(`#${dataItem.id}-content`);
         uiList.push(modal);
-        dataItem.addEventListener("click", () => showItem([modal, modalClose, overlay, body]));
+        dataItem.addEventListener("click", () => {
+            hideItem("all")
+            showItem([modal, modalClose, overlay, body]);
+        });
     })
 }
 
@@ -85,7 +88,7 @@ stepItems.forEach((step) => {
 const tab = (data) => {
     data.forEach((tabList) => {
         let tabsTitle = document.querySelectorAll(`#${tabList.id}-header__title > li`);
-        let isTitle = tabsTitle.length > 0 ? true : false;
+        let isTitle = tabsTitle.length > 0;
 
         let tabs = document.querySelectorAll(`#${tabList.id}-content > li`);
         let triggers = document.querySelectorAll(`#${tabList.id} > li`);
@@ -119,3 +122,19 @@ faqAaccordion.forEach((accordion) => {
         } else accordionFunc(accordion);
     });
 });
+
+let dropdownItems = document.querySelectorAll('.dropdown .item');
+dropdownItems.forEach((item) => {
+    item.addEventListener('click', (e) => {
+
+        if (item.classList.contains(activeClass)) {
+            accordionFunc(e.target.parentNode.parentNode.parentNode)
+        } else {
+            let itemParentList = e.target.parentNode.parentNode;
+            itemParentList = itemParentList.querySelectorAll('.item')
+            itemParentList.forEach((allItem) => hideItem(allItem))
+            showItem(item);
+            hideItem(e.target.parentNode.parentNode.parentNode)
+        }
+    })
+})
