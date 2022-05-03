@@ -1511,6 +1511,7 @@ body.active {
 }
 
 .container__content-header .info {
+    max-width: 650px;
     gap: 40px;
 }
 
@@ -1672,6 +1673,10 @@ body.active {
 
 /* news */
 
+.screen_left {
+    align-items: start !important;
+}
+
 .screen_search,
 .screen_search .result__list {
     gap: 40px;
@@ -1726,6 +1731,10 @@ body.active {
 .tabs__header-list__item.active .tab-link {
     position: relative;
     padding: 10px 0;
+}
+
+.tab-link:hover {
+    cursor: pointer;
 }
 
 .tabs__header-list__item.active .tab-link::after {
