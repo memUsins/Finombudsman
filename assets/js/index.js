@@ -141,3 +141,18 @@ stepItems.forEach((step) => {
         } else accordionFunc(step);
     });
 });
+
+let contentSidebar = document.querySelectorAll(".content-sidebar .list .item");
+
+contentSidebar.forEach((item) => {
+    item.addEventListener('click', () => {
+        if (item.classList.contains(activeClass)) {
+            contentSidebar.forEach((i) => hideItem(i));
+            hideItem(item);
+        } else {
+            contentSidebar.forEach((i) => hideItem(i));
+            item.classList.add('active');
+            ShowItem(item);
+        }
+    })
+});
