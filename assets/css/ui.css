@@ -156,6 +156,10 @@ small,
     color: var(--color__text_3) !important;
 }
 
+.text_red {
+    color: var(--color_danger);
+}
+
 .content__section h1,
 .content__section .h1,
 .content__section h2,
@@ -171,7 +175,8 @@ small,
 .content__section .h7,
 .content__section .h8,
 .content__section p,
-.content__section .p {
+.content__section .p,
+.table {
     margin-bottom: 30px;
 }
 
@@ -240,6 +245,11 @@ small,
 
 .ls_none::before {
     display: none !important;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /*  */
@@ -340,6 +350,13 @@ a:hover,
     flex-direction: row;
     position: relative;
     gap: 10px;
+    cursor: pointer;
+}
+
+.button_success {
+    background: var(--color_main-light_1);
+    color: var(--color__text_5);
+    padding: 10px 20px;
 }
 
 .button_transparent {
@@ -350,6 +367,7 @@ a:hover,
     border: 1px solid var(--color__text_4);
     color: var(--color_main-light_1);
     font-weight: normal;
+    background: transparent;
 }
 
 .button_transparent:hover {
