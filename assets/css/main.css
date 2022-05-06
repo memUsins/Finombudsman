@@ -2742,7 +2742,7 @@ td:nth-child(5) {
         display: none;
     }
 
-    .overlay,
+    .overlay_mobile,
     .sidebar {
         top: 70px;
     }
