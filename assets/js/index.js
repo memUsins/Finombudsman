@@ -5,6 +5,11 @@ let sidebarOpen = document.querySelector(".header__sidebar-bar");
 let sidebarClose = document.querySelector(".sidebar__bar");
 let sidebar = document.querySelector(".sidebar");
 
+// Search
+let searchOpen = document.querySelector(".search__open");
+let searchClose = document.querySelector(".search__close");
+let search = document.querySelector(".header__search-mobile .hide");
+
 // Main
 let overlay = document.querySelector(".overlay");
 let body = document.querySelector("body");
@@ -116,8 +121,20 @@ dropdownItems.forEach((item) => {
 });
 
 // Sidebar
-sidebarOpen.addEventListener("click", () => showItem([sidebar, overlay, body]));
-sidebarClose.addEventListener("click", () => hideItem([sidebar, overlay, body]));
+sidebarOpen.addEventListener("click", () => {
+    if (!sidebar.classList.contains('active')) {
+        showItem([sidebar, sidebarOpen, overlay, body])
+    } else {
+        hideItem([sidebar, sidebarOpen, overlay, body])
+    }
+});
+sidebarClose.addEventListener("click", () => {
+    if (!sidebar.classList.contains('active')) {
+        showItem([sidebar, sidebarOpen, overlay, body])
+    } else {
+        hideItem([sidebar, sidebarOpen, overlay, body])
+    }
+});
 
 let sidebarNavAaccordion = document.querySelectorAll(".sidebar__nav-item");
 
@@ -131,7 +148,7 @@ sidebarNavAaccordion.forEach((accordion) => {
 });
 
 // Steps
-let stepItems = document.querySelectorAll(".step-screen__list-item");
+let stepItems = document.querySelectorAll(".step .item");
 
 stepItems.forEach((step) => {
     step.addEventListener("click", () => {
@@ -156,3 +173,7 @@ contentSidebar.forEach((item) => {
         }
     })
 });
+
+// Sidebar
+searchOpen.addEventListener("click", () => showItem(search));
+searchClose.addEventListener("click", () => hideItem(search));
