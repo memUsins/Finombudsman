@@ -41,6 +41,10 @@ body {
     max-width: var(--grid__page-total);
 }
 
+.home .screen {
+    margin-bottom: 100px;
+}
+
 /* header */
 
 .header,
@@ -515,7 +519,7 @@ body {
 }
 
 .screen_first {
-    margin-top: 70px !important;
+    margin-top: 0 !important;
 }
 
 .screen_grid-total {
@@ -624,7 +628,7 @@ body {
 .play__triangle {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 3px;
     bottom: 0;
     right: 0;
     margin: auto;
@@ -703,6 +707,7 @@ body {
     align-items: stretch;
     flex-direction: row;
     gap: 20px;
+    padding-bottom: 30px;
 }
 
 .step .item {
@@ -716,6 +721,11 @@ body {
     border-radius: 5px;
     padding: 40px 30px;
     position: relative;
+    cursor: pointer;
+}
+
+.step .item:hover {
+    box-shadow: 0px 20px 35px -15px #0086744d;
 }
 
 .step .item.active {
@@ -723,7 +733,7 @@ body {
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: row;
-    background: var(--color_main-light_2);
+    background: var(--color_linear_component_hover);
     box-shadow: 0px 20px 35px -15px #0086744d;
 }
 
@@ -813,9 +823,15 @@ body {
 
 /* Conflict */
 
-.conflict-screen__title {
+.conflict-screen__title,
+.step-screen__title,
+.check-screen__title {
+    max-width: 650px;
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
     text-align: center;
+    color: var(--color__text_gray);
 }
 
 .conflict-screen__list {
@@ -974,7 +990,7 @@ body {
     color: var(--color__text_4);
 }
 
-.news-screen__tabs-header .item.active .news-screen__tabs-header .link {
+.news-screen__tabs-header .item.active .link {
     color: var(--color_main-light_1);
     text-decoration: underline;
     font-weight: bold;
@@ -1015,6 +1031,14 @@ body {
     justify-content: start;
     align-items: start;
     flex-direction: column;
+}
+
+.news-screen__content .content-item .info .icon {
+    opacity: 0;
+}
+
+.news-screen__content .content-item .info .link:hover .icon {
+    opacity: 1;
 }
 
 .news-screen__content .content-item .img {
@@ -2537,7 +2561,11 @@ td:nth-child(5) {
 }
 
 @media screen and (max-width: 768px) {
+
     /* header */
+    .home .screen {
+        margin-bottom: 70px;
+    }
 
     .welcome-screen,
     .welcome-screen__info-footer {
@@ -2792,6 +2820,7 @@ td:nth-child(5) {
     }
 
     .sidebar__nav-item.active>.row::before {
+        transform: rotate(180deg);
         left: 20px;
     }
 
