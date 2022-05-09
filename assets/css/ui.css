@@ -2,7 +2,7 @@
 
 h1,
 .h1 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 46px;
@@ -11,7 +11,7 @@ h1,
 
 h2,
 .h2 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
@@ -20,7 +20,7 @@ h2,
 
 h3,
 .h3 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 32px;
@@ -29,7 +29,7 @@ h3,
 
 h4,
 .h4 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
@@ -38,7 +38,7 @@ h4,
 
 h5,
 .h5 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
@@ -47,7 +47,7 @@ h5,
 
 h6,
 .h6 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
@@ -55,7 +55,7 @@ h6,
 }
 
 .h7 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
@@ -63,7 +63,7 @@ h6,
 }
 
 .h8 {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -71,7 +71,7 @@ h6,
 }
 
 .big {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -80,7 +80,7 @@ h6,
 
 p,
 .p {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -90,7 +90,7 @@ p,
 
 small,
 .small {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
@@ -202,7 +202,7 @@ small,
 
 .content__section ul li::before,
 .list_dot::before {
-    content: ' ';
+    content: " ";
     float: left;
     margin-top: 9px;
     margin-right: 10px;
@@ -282,8 +282,6 @@ small,
     gap: 40px;
 }
 
-
-
 /* Forms */
 
 input,
@@ -313,7 +311,6 @@ a:hover,
 .link_next::after {
     content: url(./../icons/arrow.svg);
     margin-left: 10px;
-
 }
 
 .link_next {
@@ -329,7 +326,7 @@ a:hover,
     border: 1px solid transparent;
     border-radius: 5px;
 
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -338,7 +335,7 @@ a:hover,
 
 .input:focus,
 .input:hover {
-    border-color: var(--color_main-light_1)
+    border-color: var(--color_main-light_1);
 }
 
 .button {
@@ -383,7 +380,7 @@ a:hover,
 
 .button_main::after,
 .gradient-bg__active::after {
-    content: '';
+    content: "";
     width: 100%;
     height: 100%;
     top: 0;
@@ -414,7 +411,7 @@ a:hover,
 }
 
 .button_main span {
-    font-family: 'Exo 2';
+    font-family: "Exo 2";
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
@@ -432,7 +429,7 @@ a:hover,
     top: 0;
     left: 0;
     transition: 1s ease-in-out;
-    background-color: #10322C;
+    background-color: #10322c;
     mix-blend-mode: multiply;
     opacity: 0;
     z-index: 10;
@@ -461,7 +458,6 @@ a:hover,
 .modal.active {
     left: 0;
     transition: 0.5s ease-in-out;
-
 }
 
 .modal__close {

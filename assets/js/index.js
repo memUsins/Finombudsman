@@ -16,7 +16,7 @@ let body = document.querySelector("body");
 let modalClose = document.querySelector(".modal__close");
 
 const activeClass = "active";
-const uiList = [body, overlay, sidebar, modalClose];
+const uiList = [body, overlay, sidebar, modalClose, sidebarClose];
 
 // Main Functions
 
