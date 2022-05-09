@@ -688,7 +688,6 @@ body {
     width: 100%;
 }
 
-
 .step-screen__title {
     width: 100%;
     text-align: center;
@@ -1034,7 +1033,7 @@ body {
 }
 
 .news-screen__content .content-item .link {
-    color: var(--color_gray-light_0)
+    color: var(--color_gray-light_0);
 }
 
 .news-screen__content .icon {
@@ -2699,7 +2698,6 @@ td:nth-child(5) {
     .mobile .block__third .column .item {
         gap: 10px;
     }
-
 }
 
 @media screen and (max-width: 480px) {
@@ -3011,7 +3009,6 @@ td:nth-child(5) {
         align-items: flex-start;
         margin-left: 20px;
     }
-
 
     /* footer */
 
