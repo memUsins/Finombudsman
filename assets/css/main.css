@@ -86,7 +86,7 @@ body {
     width: 100%;
     font-weight: 600;
     text-transform: uppercase;
-    color: var(--color_main-light_1);
+    color: var(--color_main-light_1) !important;
 }
 
 .logo .slogan {
@@ -471,7 +471,7 @@ body {
 /* Sidebar right */
 
 .contact__list .main-title {
-    color: var(--color__text_0);
+    color: var(--color__text_1);
     margin-bottom: 10px;
 }
 
@@ -495,7 +495,7 @@ body {
 }
 
 .contact__list .list .item .title {
-    color: var(--color__text_0);
+    color: var(--color__text_4);
 }
 
 .contact__list .list .item .row .icon {
@@ -1237,10 +1237,17 @@ body {
     width: 100%;
 }
 
+
 .footer__content .block__second-list {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer__content .block__second-list a,
+.footer__content .block__first a,
+.footer__content .block__first p {
+    color: var(--color__text_4)
 }
 
 .footer__content .block__second-list .list_dot::before {
@@ -2741,12 +2748,12 @@ td:nth-child(5) {
 
     h1,
     .h1 {
-        font-size: 28px;
+        font-size: 32px;
     }
 
     h2,
     .h2 {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     h3,
@@ -2907,10 +2914,21 @@ td:nth-child(5) {
 
     .content__people-card {
         flex-direction: column;
+        gap: 20px;
     }
 
     .content__people-card_small {
         flex-direction: row;
+    }
+
+    .content__people-card .img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .content__people-card_small .img {
+        max-width: 100px;
+        height: 100px;
     }
 
     .card__item h1,
