@@ -894,6 +894,10 @@ body {
     height: 60px;
 }
 
+.about-screen__container .mobile {
+    display: none
+}
+
 .about-screen {
     display: flex;
     justify-content: space-between;
@@ -2558,6 +2562,23 @@ td:nth-child(5) {
 
 @media screen and (max-width: 768px) {
 
+    .about-screen__container .mobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-screen__container .pc {
+        display: none
+    }
+
+    .about-screen__container .mobile .about-screen__video {
+        max-width: 100%;
+    }
+
+    .about-screen__container .mobile {
+        gap: 40px;
+    }
+
     /* header */
     .home .screen {
         margin-bottom: 70px;
@@ -2648,31 +2669,31 @@ td:nth-child(5) {
         flex-direction: column;
     }
 
-    .mobile .block {
+    .footer .mobile .block {
         flex-direction: row;
         padding: 0 30px;
     }
 
-    .mobile .block__first .column,
-    .mobile .block__third .column {
+    .footer .mobile .block__first .column,
+    .footer .mobile .block__third .column {
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 20px;
     }
 
-    .mobile .block__second {
+    .footer .mobile .block__second {
         width: 100%;
         flex-direction: row;
     }
 
-    .mobile .block__first {
+    .footer .mobile .block__first {
         border-bottom: 1px solid var(--color_gray-light_1);
         padding-top: 30px;
         padding-bottom: 50px;
     }
 
-    .mobile .block__third {
+    .footer .mobile .block__third {
         padding: 30px 30px;
         background: var(--color_main-light_2);
         mix-blend-mode: multiply;
@@ -2686,16 +2707,16 @@ td:nth-child(5) {
         display: flex;
     }
 
-    .mobile .block__third .list {
+    .footer .mobile .block__third .list {
         flex-direction: row;
         gap: 20px;
     }
 
-    .mobile .block__third .qr__info .row {
+    .footer .mobile .block__third .qr__info .row {
         justify-content: start;
     }
 
-    .mobile .block__third .column .item {
+    .footer .mobile .block__third .column .item {
         gap: 10px;
     }
 }
