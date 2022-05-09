@@ -3054,6 +3054,6 @@ td:nth-child(5) {
     .mobile .block__first,
     .mobile .block__second,
     .mobile .block__third .list {
-        flex-direction: column;
+        flex-direction: column !important;
     }
 }
