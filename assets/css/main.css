@@ -298,7 +298,8 @@ body {
     flex-direction: row;
     overflow-y: auto;
     opacity: 0;
-    transition: .55s opacity, .55s visibility;
+    transition: 0.3s opacity,
+        0.3s visibility;
     visibility: hidden;
 }
 
