@@ -40,6 +40,7 @@ body {
 
 .container {
     max-width: var(--grid__page-total);
+    padding: 0 20px;
 }
 
 .home .screen {
@@ -2502,10 +2503,6 @@ td:nth-child(5) {
 @media screen and (max-width: 1024px) {
     /* Header */
 
-    .header {
-        padding: 0 40px;
-    }
-
     .header__social,
     .header__localization {
         display: none;
@@ -2522,11 +2519,6 @@ td:nth-child(5) {
     .welcome-screen__info h3 {
         font-size: 26px;
         font-weight: normal;
-    }
-
-    .screen {
-        padding-left: 40px;
-        padding-right: 40px;
     }
 
     .screen_padding {
@@ -2740,17 +2732,6 @@ td:nth-child(5) {
     .header__phone,
     .header__button {
         display: none;
-    }
-
-    .modal,
-    .header__search-mobile .hide,
-    .header {
-        padding: 0 20px;
-    }
-
-    .screen {
-        padding-left: 20px;
-        padding-right: 20px;
     }
 
     h1,
