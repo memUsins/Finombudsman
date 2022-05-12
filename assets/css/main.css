@@ -138,6 +138,7 @@ body {
     right: 15px;
     margin: auto 0;
     position: absolute;
+    background: none;
 }
 
 .search-btn__icon {
