@@ -44,6 +44,7 @@
 .welcome-screen__info h3 {
     color: var(--color__text_1);
     margin: 5px 0 30px 0;
+    font-weight: 500;
 }
 
 .welcome-screen__info p {
@@ -134,6 +135,19 @@
     box-shadow: 0px 20px 35px -15px #0086744d;
 }
 
+.step .item.active::before {
+    content: " ";
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    background: var(--color_linear_component_hover);
+    transform: rotate(180deg);
+    border-radius: 15px;
+}
+
 .item__number {
     max-width: 45px;
     width: 100%;
@@ -174,7 +188,7 @@
     text-align: left;
     font-size: 20px;
     margin: 0;
-    color: var(--color__text_2);
+    color: var(--color__text_3);
 }
 
 .item__info-description {
@@ -185,7 +199,7 @@
     display: block;
     width: 100%;
     text-align: left;
-    color: var(--color__text_1);
+    color: var(--color__text_3);
     margin: 10px 0;
 }
 
@@ -197,7 +211,7 @@
     display: block;
     width: 100%;
     text-align: left;
-    color: var(--color_main-light_0);
+    color: var(--color_main-light_1);
 }
 
 .item__hammer {
@@ -220,14 +234,13 @@
 /* Conflict */
 
 .conflict-screen__title,
-.step-screen__title,
 .check-screen__title {
     max-width: 650px;
     width: 100%;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
-    color: var(--color_gray-light_0);
+    color: var(--color__text_1);
 }
 
 .check-screen__title {
@@ -264,7 +277,7 @@
 }
 
 .conflict-screen__list-item__description {
-    color: var(--color__text_4);
+    color: var(--color__text_2);
 }
 
 /* Check screen */
@@ -290,7 +303,7 @@
 }
 
 .check-screen__button {
-    max-width: 200px;
+    max-width: 210px;
     width: 100%;
     height: 60px;
 }
@@ -316,11 +329,15 @@
     gap: 30px;
 }
 
+.about-screen__info p {
+    line-height: 175%;
+}
+
 .about-screen__button {
     max-width: 230px;
     width: 100%;
     height: 60px;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .about-screen__video {
@@ -345,11 +362,17 @@
     object-fit: cover;
 }
 
+.player-ctrl_about {
+    padding: 0 20px;
+}
+
 .player-ctrl_about .annotation {
-    max-width: 300px;
-    width: 100%;
+    max-width: 310px;
     color: var(--color__text_5) !important;
     margin: 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 160%;
 }
 
 /* News screen */
@@ -426,12 +449,36 @@
     flex-direction: column;
 }
 
+.news-screen__content .content-item .info small {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 175%;
+    color: #B7B7B7;
+}
+
+.news-screen__content .content-item .info p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 150%;
+    color: var(--color__text_1);
+}
+
+.news-screen__content .content-item .info .link {
+    font-weight: 400;
+    line-height: 150%;
+}
+
+.news-screen__content .content-item .info .link:hover {
+    font-weight: 700;
+}
+
 .news-screen__content .content-item .link {
     color: var(--color_gray-light_0);
 }
 
 .news-screen__content .icon {
-    font-size: 10px;
+    font-size: 8px;
+    vertical-align: middle;
 }
 
 .news-screen__content .link:hover .icon {
@@ -565,6 +612,15 @@
         flex-direction: column;
         gap: 30px;
     }
+
+    /* STEP SCREEN COMPONENT ADAPTIVE */
+    .step .item.active {
+        padding: 10px 10px 20px 10px;
+    }
+
+    .step .item {
+        padding: 20px;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -608,6 +664,7 @@
         align-items: flex-start;
         flex-direction: row;
         min-height: auto;
+        padding: 10px;
     }
 
     .step .item.active {
@@ -619,5 +676,14 @@
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .news-screen__content .content-item {
+        max-width: 320px;
+    }
+
+    .news-screen__content .content-item .img {
+        max-height: 170px;
+        height: 100%;
     }
 }

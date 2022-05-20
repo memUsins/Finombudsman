@@ -98,7 +98,7 @@ small,
 }
 
 .text_active {
-    color: var(--color_main-light_1);
+    color: var(--color_main-light_1) !important;
 }
 
 .text_bold {
@@ -419,7 +419,7 @@ a:hover,
     font-family: "Exo 2";
     font-style: normal;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
     text-transform: uppercase;
     z-index: 1;
 }

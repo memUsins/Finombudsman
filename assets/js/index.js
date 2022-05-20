@@ -154,14 +154,28 @@ sidebarClose.addEventListener("click", () => {
 });
 
 // Sidebar nav
-let sidebarNavAaccordion = document.querySelectorAll(".sidebar__nav-item");
+let sidebarNavAaccordionBtn = document.querySelectorAll(".sidebar__nav-item .list-open");
+let sidebarNavAaccordionItems = document.querySelectorAll(".sidebar__nav-item");
+let sidebarNavAaccordionMobile = document.querySelectorAll(".sidebar__nav-item .toggle");
 
-sidebarNavAaccordion.forEach((accordion) => {
+sidebarNavAaccordionBtn.forEach((accordion) => {
     accordion.addEventListener("click", () => {
-        if (!accordion.classList.contains(activeClass)) {
-            sidebarNavAaccordion.forEach((item) => hideItem([item]));
-            showItem(accordion);
-        } else accordionFunc(accordion);
+        let body = accordion.parentNode.parentNode;
+        if (!body.classList.contains(activeClass)) {
+            sidebarNavAaccordionItems.forEach((item) => hideItem([item]));
+            showItem(body);
+        } else accordionFunc(body);
+    });
+});
+
+sidebarNavAaccordionMobile.forEach((accordion) => {
+    accordion.addEventListener("click", () => {
+        let body = accordion.parentNode;
+        if (!body.classList.contains(activeClass)) {
+            console.log(body)
+            sidebarNavAaccordionItems.forEach((item) => hideItem([item]));
+            showItem(body);
+        } else accordionFunc(body);
     });
 });
 
