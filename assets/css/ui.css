@@ -259,7 +259,13 @@ small,
 }
 
 .row {
+    display: flex;
     flex-direction: row;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
 }
 
 .ai_center {
@@ -430,8 +436,7 @@ a:hover,
     mix-blend-mode: multiply;
     opacity: 0;
     visibility: hidden;
-    transition: 0.3s opacity,
-        0.3s visibility;
+    transition: 0.3s opacity, 0.3s visibility;
 }
 
 .overlay.active {
@@ -451,8 +456,7 @@ a:hover,
     right: 0;
     visibility: hidden;
     opacity: 0;
-    transition: 0.3s opacity,
-        0.3s visibility;
+    transition: 0.3s opacity, 0.3s visibility;
 }
 
 .modal.active {

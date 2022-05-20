@@ -5,7 +5,7 @@
 //         arrows: false,
 //         pagination: false
 //     });
-//     let newsSliders = document.querySelectorAll(".splide-news");
+//     let newsSliders = document.querySelectorAll(".");
 //     for (let i = 0; i < newsSliders.length; i++) {
 //         new Splide(newsSliders[i], {
 //             drag: 'free',

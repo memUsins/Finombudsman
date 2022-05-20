@@ -130,7 +130,6 @@ if (dropdownItems) {
     });
 }
 
-
 // Sidebar
 searchOpen.addEventListener("click", () => showItem(search));
 searchClose.addEventListener("click", () => hideItem(search));
@@ -175,7 +174,7 @@ if (stepItems) {
             if (!step.classList.contains(activeClass)) {
                 stepItems.forEach((item) => hideItem([item]));
                 showItem(step);
-            } else accordionFunc(step);
+            }
         });
     });
 }
