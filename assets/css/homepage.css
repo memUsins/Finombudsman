@@ -544,6 +544,15 @@
         flex: 1;
     }
 
+    .welcome-screen__info-footer {
+        margin-top: 40px;
+    }
+
+    .welcome-screen,
+    .welcome-screen__info-footer {
+        gap: 30px;
+    }
+
     /* CONFLICT SCREEN COMPONENT ADAPTIVE */
 
     .conflict-screen__list-item {
@@ -567,6 +576,18 @@
         justify-content: center;
         align-items: center;
         text-align: center;
+    }
+
+    .welcome-screen__info h1 {
+        font-size: 22px;
+    }
+
+    .welcome-screen__info h3 {
+        font-size: 20px;
+    }
+
+    .welcome-screen__info p {
+        font-size: 11px;
     }
 
     .conflict-screen__list-item {

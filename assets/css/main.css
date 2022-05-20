@@ -306,7 +306,6 @@ body {
 
 .sidebar__nav-item .row::before {
     margin-top: 4px;
-    background: #8a8a8a;
 }
 
 /* Icon */
@@ -778,6 +777,10 @@ body {
 
 .player-ctrl:hover .player-ctrl__quote {
     text-decoration: underline;
+}
+
+.player-ctrl .annotation {
+    color: var(--color__text_3);
 }
 
 /* YOUTUBE MODAL COMPONENT */
@@ -2171,6 +2174,11 @@ td:nth-child(5) {
 }
 
 @media screen and (max-width: 768px) {
+    /* SCREEN COMPONENT ADAPTIVE */
+
+    .screen_padding {
+        padding: 40px 20px !important;
+    }
 
     /* HEADER COMPONENT ADAPTIVE */
     .header__search-mobile {
@@ -2276,6 +2284,7 @@ td:nth-child(5) {
 }
 
 @media screen and (max-width: 480px) {
+
     /* HEADER COMPONENT ADAPTIVE */
 
     .header__phone,
