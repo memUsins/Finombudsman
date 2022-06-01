@@ -2572,10 +2572,6 @@ td:nth-child(5) {
         flex-direction: column;
     }
 
-    .sidebar.active {
-        height: max-content;
-    }
-
     .sidebar__left {
         max-width: 100%;
         padding: 20px 30px 150px;
