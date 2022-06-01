@@ -156,28 +156,16 @@ small,
     color: var(--color__text_3) !important;
 }
 
+.text_gray-light {
+    color: var(--color__text_2) !important;
+}
+
 .text_red {
     color: var(--color_danger);
 }
 
-.content__section h1,
-.content__section .h1,
-.content__section h2,
-.content__section .h2,
-.content__section h3,
-.content__section .h3,
-.content__section h4,
-.content__section .h4,
-.content__section h5,
-.content__section .h5,
-.content__section h6,
-.content__section .h6,
-.content__section .h7,
-.content__section .h8,
-.content__section p,
-.content__section .p,
-.table {
-    margin-bottom: 30px;
+.text_default {
+    color: #37474F;
 }
 
 .content__section ol li {
@@ -185,9 +173,18 @@ small,
     margin-left: 15px;
 }
 
+.content__section ol li:nth-child(n+10) {
+    margin-left: 25px;
+}
+
 .content__section ol li,
 .content__section ul li {
     margin-bottom: 10px;
+}
+
+.content__section ol li:last-child,
+.content__section ul li:last-child {
+    margin-bottom: 0;
 }
 
 .content__section ul li {
@@ -227,16 +224,15 @@ small,
     margin: 0;
 }
 
-.content__section ol,
-.content__section ul {
-    margin-bottom: 20px;
-}
-
 .content__section a,
 .content__section .link {
     color: var(--color_main-light_1);
     text-decoration: underline;
     font-weight: bold;
+}
+
+.content__section p>a:hover {
+    filter: brightness(0.8);
 }
 
 .content__section .button_transparent {
@@ -245,6 +241,16 @@ small,
 
 .ls_none::before {
     display: none !important;
+}
+
+.title-container .desc {
+    margin: 0;
+    color: var(--color__text_0);
+    font-weight: 500;
+}
+
+.title-container .date {
+    margin: 0;
 }
 
 .center {
@@ -270,6 +276,10 @@ small,
 
 .ai_center {
     align-items: center;
+}
+
+.jc_center {
+    justify-content: center;
 }
 
 .gap_10 {
@@ -313,15 +323,24 @@ a:hover,
     color: var(--color_main-light_1) !important;
 }
 
+/* 
 .link_next::after {
     content: url(./../icons/arrow.svg);
     margin-left: 10px;
-}
+} */
 
-.link_next {
+.link_with-arrow {
     text-transform: uppercase !important;
     color: var(--color__text_0) !important;
     font-weight: normal;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+}
+
+.link_next {
+    font-size: 8px;
+    vertical-align: middle;
+    margin-left: 5px;
 }
 
 .input {
