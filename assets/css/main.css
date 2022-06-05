@@ -384,6 +384,7 @@ body.active {
 }
 
 .sidebar__nav-item .children .link {
+    width: 100%;
     color: #8a8a8a;
     font-weight: 400;
     font-size: 14px;
@@ -1319,11 +1320,13 @@ body.active {
     justify-content: space-between;
     align-items: start;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
 .content__section-journal__list {
-    max-width: 260px;
+    flex: 1;
+    /* max-width: 260px; */
     width: 100%;
     display: flex;
     justify-content: start;
@@ -1359,6 +1362,7 @@ body.active {
 }
 
 .content__section-journal__info {
+    flex: 2;
     width: 100%;
     display: flex;
     justify-content: start;
@@ -2482,6 +2486,16 @@ td:nth-child(5) {
 
     .footer .mobile .block__third .column .item {
         gap: 10px;
+    }
+
+    /*  */
+
+    .content__section-journal {
+        flex-direction: column;
+    }
+
+    .content__section-journal__list {
+        flex-wrap: wrap;
     }
 }
 
