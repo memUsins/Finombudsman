@@ -647,13 +647,23 @@
         flex-direction: column;
     }
 
+    .news-screen__content .slider {
+        gap: 20px;
+    }
+
     .news-screen__content .content-item {
-        max-width: 320px;
+        max-width: 240px;
     }
 
     .news-screen__content .content-item .img {
-        max-height: 170px;
         height: 100%;
+        min-height: 200px;
+        max-height: 210px;
+    }
+
+    .news-screen__content .content-item .info .link {
+        font-weight: 700;
+        color: var(--color_main-light_1)
     }
 
     .item__info-title {

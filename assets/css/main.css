@@ -1193,13 +1193,6 @@ body.active {
     gap: 20px;
 }
 
-.content-sidebar .item .icon {
-    width: 13px;
-    height: 13px;
-    margin-right: 5px;
-    transition: 0.1s;
-}
-
 .content-sidebar .children__list {
     width: 100%;
     max-height: 0;
@@ -1211,8 +1204,36 @@ body.active {
     max-height: 100%;
 }
 
-.content-sidebar .item.active .icon {
+.content-sidebar .item .head {
+    display: flex;
+    justify-content: start;
+    align-content: center;
+    gap: 5px;
+}
+
+.content-sidebar .item .head::before {
+    content: url("./../icons/arrow-90.svg");
+    width: 13px;
+    height: 13px;
+    vertical-align: middle;
+    transition: 0.1s;
+}
+
+.content-sidebar .item .head {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--color__text_4)
+}
+
+.content-sidebar .item.active .head {
+    color: var(--color_main-light_1);
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.content-sidebar .item.active .head::before {
     transform: rotate(90deg);
+    margin-top: 6px;
 }
 
 .content-sidebar .children__item {
@@ -1220,6 +1241,17 @@ body.active {
     justify-content: start;
     align-items: center;
     margin-left: 23px;
+    gap: 5px;
+}
+
+.content-sidebar .list_dot::before {
+    background: #8a8a8a;
+    vertical-align: middle;
+    margin-top: 2px;
+}
+
+.content-sidebar .children__item .title {
+    color: #8a8a8a;
 }
 
 /* CONTENT PEOPLE CARD COMPONENT */
@@ -2463,8 +2495,7 @@ td:nth-child(5) {
 
     .footer .mobile .block__third {
         padding: 30px 30px;
-        background: var(--color_main-light_2);
-        mix-blend-mode: multiply;
+        background: #E1F3EF;
     }
 
     .footer .pc {
@@ -2506,6 +2537,36 @@ td:nth-child(5) {
     .header__phone,
     .header__button {
         display: none;
+    }
+
+    .sidebar__phone,
+    .sidebar__phone .item {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sidebar__nav-footer a {
+        font-size: 16px;
+    }
+
+    .sidebar__nav-footer .row {
+        margin-top: 20px;
+    }
+
+    .sidebar__border {
+        margin: 40px 0;
+    }
+
+    .sidebar__phone p {
+        font-size: 16px;
+        font-weight: bold
+    }
+
+    .sidebar__phone .icon {
+        width: 13px;
+        height: 13px;
+        vertical-align: middle;
     }
 
     /* FOOTER COMPONENT ADAPTIVE*/
@@ -2588,16 +2649,17 @@ td:nth-child(5) {
 
     .sidebar__left {
         max-width: 100%;
-        padding: 20px 30px 150px;
+        padding: 20px 30px 0;
         background: transparent;
     }
 
     .sidebar__nav-item .toggle {
-        height: 60px;
+        height: 50px;
         display: block;
     }
 
     .sidebar__nav-item.active .toggle {
+        height: 60px;
         background: #EDF5F4;
         mix-blend-mode: multiply;
     }
@@ -2654,6 +2716,10 @@ td:nth-child(5) {
         position: absolute;
     }
 
+    .sidebar__nav-item.wo-child>.row::before {
+        display: none;
+    }
+
     .sidebar__nav-item.active>.row {
         height: 60px;
         padding: 20px 40px;
@@ -2673,15 +2739,35 @@ td:nth-child(5) {
     .sidebar__mobile-list {
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: center;
         flex-direction: column;
+        position: relative;
         gap: 20px;
         width: 100%;
+        height: max-content;
+        min-height: 150px;
+        margin-bottom: 70px;
+    }
+
+    .sidebar__mobile-list .background {
+        width: 100%;
         height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: #EDF5F4;
+        mix-blend-mode: multiply;
+        opacity: 0.3;
+        z-index: -1;
     }
 
     .sidebar__mobile-list .social {
-        justify-content: start;
+        justify-content: center;
+    }
+
+    .sidebar__mobile-list .social .item .icon {
+        width: 24px;
+        height: 24px;
     }
 
     .sidebar__nav-item .plus__container {
