@@ -1193,6 +1193,10 @@ body.active {
     gap: 20px;
 }
 
+.content-sidebar .list .item {
+    width: 100%;
+}
+
 .content-sidebar .children__list {
     width: 100%;
     max-height: 0;
@@ -1234,6 +1238,7 @@ body.active {
 .content-sidebar .item.active .head::before {
     transform: rotate(90deg);
     margin-top: 6px;
+    margin-left: 6px;
 }
 
 .content-sidebar .children__item {
@@ -1241,7 +1246,6 @@ body.active {
     justify-content: start;
     align-items: center;
     margin-left: 23px;
-    gap: 5px;
 }
 
 .content-sidebar .list_dot::before {
@@ -1252,6 +1256,7 @@ body.active {
 
 .content-sidebar .children__item .title {
     color: #8a8a8a;
+    width: fit-content;
 }
 
 /* CONTENT PEOPLE CARD COMPONENT */
