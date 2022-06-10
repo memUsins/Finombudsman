@@ -1229,7 +1229,7 @@ body.active {
 .content-sidebar .item .head {
     font-weight: 400;
     font-size: 16px;
-    color: var(--color__text_4)
+    color: var(--color__text_4);
 }
 
 .content-sidebar .item.active .head {
@@ -2058,7 +2058,7 @@ body.active {
 
 .contacts__list .item .trigger .small {
     max-width: 230px;
-    color: var(--color__text_4)
+    color: var(--color__text_4);
 }
 
 .map {
@@ -2120,7 +2120,7 @@ body.active {
 .screen_quiz .quiz_item {
     width: 100%;
     flex-direction: column;
-    gap: 30px;
+    gap: 20px;
     display: none;
 }
 
@@ -2157,8 +2157,8 @@ body.active {
 }
 
 .status-bar .loader .rocket {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
 }
 
 .screen_quiz_1 .status-bar .loader .line {
@@ -2361,7 +2361,7 @@ td:nth-child(5) {
 
 .screen_education-list .main-title {
     max-width: 735px;
-    margin: auto
+    margin: auto;
 }
 
 .screen_education-list .main-desc {
@@ -2387,7 +2387,7 @@ td:nth-child(5) {
 }
 
 .photo-card__list .item::after {
-    content: ' ';
+    content: " ";
     width: 100%;
     height: 100%;
     position: absolute;
@@ -2451,6 +2451,164 @@ td:nth-child(5) {
     grid-row-end: 10;
 }
 
+/* NEW QUIZ */
+
+.blitz_check {
+    margin-top: 100px;
+}
+
+.calculator_body1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculator_body1 p,
+.calculator_body1 li,
+.calculator_body1 a {
+    font-size: 15px !important;
+}
+
+.description-quiz {
+    font-size: 22px;
+    margin-bottom: 40px;
+}
+
+.blitz-fieldset,
+.blitz_block {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.blitz-fieldset.hidden {
+    display: none;
+}
+
+.blitz-fieldset .form-radio {
+    width: 100%;
+    padding: 25px 45px;
+    background: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    display: flex;
+    gap: 25px;
+    cursor: pointer;
+}
+
+.blitz-fieldset .form-radio:hover {
+    background: linear-gradient(103.96deg, #20c5a7 13.29%, #319c89 81.7%);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.blitz-fieldset .form-radio:hover .text {
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.blitz-fieldset .form-radio:hover .text::before {
+    border-color: #fff !important;
+}
+
+.blitz-fieldset .form-radio:hover .text::after {
+    background-color: #fff !important;
+}
+
+.form-check-input {
+    display: none;
+}
+
+.blitz-fieldset .text {
+    width: 100%;
+    font-weight: 500;
+    font-size: 18px;
+    color: #575553;
+    position: relative;
+    padding-left: 45px;
+}
+
+.blitz-fieldset .text::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 1px solid #575553;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    margin: auto 0;
+}
+
+.blitz-fieldset .text::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--color_main-light_1);
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    opacity: 0;
+}
+
+.blitz-fieldset .form-check-input:checked+.text::after {
+    opacity: 1;
+}
+
+.blitz-fieldset .form-check-input:checked+.text::before {
+    border-color: var(--color_main-light_1);
+}
+
+.blitz-fieldset .form-check-input:checked+.text {
+    color: var(--color_main-light_1);
+    font-weight: bold;
+}
+
+.blitz-fieldset h3 {
+    margin-bottom: 20px;
+}
+
+.calculator_btns {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.calculator_btns .link {
+    margin: 0 10px;
+}
+
+.calculator_btns .button {
+    height: 60px;
+    /* padding: 20px 50px; */
+}
+
+.calculator_btns .button_main {
+    max-width: 250px;
+    width: 100%;
+}
+
+.calculator_btns a {
+    text-transform: uppercase;
+    font-weight: 500 !important;
+}
+
+.calculator_btns a:last-child {
+    color: #232827;
+}
+
+.calculator_btns a:last-child:hover {
+    color: var(--color_main-light_1);
+}
+
+.blitz-fieldset a {
+    color: var(--color_main-light_1);
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 @media screen and (max-width: 1024px) {
     /* SCREEN COMPONENT ADAPTIVE */
 
@@ -2498,7 +2656,6 @@ td:nth-child(5) {
     .modal {
         padding: 0 20px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -2601,7 +2758,7 @@ td:nth-child(5) {
 
     .footer .mobile .block__third {
         padding: 30px 30px;
-        background: #E1F3EF;
+        background: #e1f3ef;
     }
 
     .footer .pc {
@@ -2656,10 +2813,19 @@ td:nth-child(5) {
         grid-column-start: 1;
         grid-column-end: 3;
     }
+
+    /* NEW QUIZ */
+
+    .calculator_body1 h1 {
+        font-size: 40px;
+    }
+
+    .blitz-fieldset h3 {
+        font-size: 30px;
+    }
 }
 
 @media screen and (max-width: 480px) {
-
     /* HEADER COMPONENT ADAPTIVE */
 
     .header__phone,
@@ -2688,7 +2854,7 @@ td:nth-child(5) {
 
     .sidebar__phone p {
         font-size: 16px;
-        font-weight: bold
+        font-weight: bold;
     }
 
     .sidebar__phone .icon {
@@ -2788,7 +2954,7 @@ td:nth-child(5) {
 
     .sidebar__nav-item.active .toggle {
         height: 60px;
-        background: #EDF5F4;
+        background: #edf5f4;
         mix-blend-mode: multiply;
     }
 
@@ -2883,7 +3049,7 @@ td:nth-child(5) {
         position: absolute;
         top: 0;
         left: 0;
-        background: #EDF5F4;
+        background: #edf5f4;
         mix-blend-mode: multiply;
         opacity: 0.3;
         z-index: -1;
@@ -3144,6 +3310,38 @@ td:nth-child(5) {
 
     .screen_education-list .main-title {
         font-size: 24px;
+    }
+
+    /* NEW QUIZ */
+
+    .calculator_body1 h1 {
+        font-size: 24px;
+    }
+
+    .blitz-fieldset h3 {
+        font-size: 22px;
+    }
+
+    .description-quiz {
+        font-size: 13px;
+    }
+
+    .calculator_btns {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .calculator_btns .button {
+        width: 100%;
+        max-width: 100% !important;
+    }
+
+    .blitz-fieldset .form-radio {
+        padding: 20px;
+    }
+
+    .blitz-fieldset .text {
+        padding-left: 35px;
     }
 }
 
