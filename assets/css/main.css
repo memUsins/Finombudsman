@@ -2471,7 +2471,7 @@ td:nth-child(5) {
 
 .description-quiz {
     font-size: 22px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .blitz-fieldset,
@@ -2607,6 +2607,48 @@ td:nth-child(5) {
     color: var(--color_main-light_1);
     font-weight: bold;
     text-decoration: underline;
+}
+
+
+.form-blitz .form-blitz-steps {
+    width: 100%;
+    height: 10px;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 10px;
+    border-radius: 2px;
+    background: var(--color_main-light_2);
+}
+
+.form-blitz .form-blitz-steps span {
+    position: relative;
+    background: #EFF4F3;
+}
+
+.form-blitz .form-blitz-steps span:before {
+    content: "";
+    background-image: url(./../icons/rocket.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    width: 39px;
+    height: 39px;
+    position: absolute;
+    right: -38px;
+    top: -19px;
+    z-index: 1;
+}
+
+.form-blitz .form-blitz-steps span:after {
+    background: #199A83;
+    content: "";
+    height: 9px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    border-radius: 1px;
+    transform: translateY(-50%);
+    width: 100%;
 }
 
 @media screen and (max-width: 1024px) {
