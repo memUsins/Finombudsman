@@ -134,7 +134,6 @@ small,
     color: var(--color__text_5) !important;
 }
 
-.text_black,
 .content__section h1,
 .content__section .h1,
 .content__section h2,
@@ -149,6 +148,11 @@ small,
 .content__section .h6,
 .content__section .h7,
 .content__section .h8 {
+    color: var(--color__text_0) !important;
+    margin: 10px 0;
+}
+
+.text_black {
     color: var(--color__text_0) !important;
 }
 
@@ -392,6 +396,7 @@ a:hover,
 }
 
 .button_transparent:hover {
+    border-color: var(--color_main-light_1);
     background-color: var(--color_main-light_1);
     color: var(--color__text_5);
 }

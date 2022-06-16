@@ -1152,7 +1152,7 @@ body.active {
     flex-direction: column;
     align-items: start;
     justify-content: start;
-    gap: 30px;
+    gap: 10px;
 }
 
 .content_with-sidebar {
@@ -1265,6 +1265,7 @@ body.active {
 /* CONTENT PEOPLE CARD COMPONENT */
 
 .content__people-card_author {
+    width: 100%;
     margin-bottom: 0 !important;
 }
 
@@ -1280,6 +1281,8 @@ body.active {
 }
 
 .content__people-card .profile {
+    max-width: 350px;
+    width: 100%;
     display: flex;
     gap: 30px;
 }
@@ -1326,12 +1329,8 @@ body.active {
     width: 100%;
 }
 
-.content__people-card .social,
-.content__people-card .profile {
-    flex: 1;
-}
-
 .content__people-card .social {
+    width: 100%;
     display: flex;
     justify-content: end;
 }
@@ -1350,6 +1349,16 @@ body.active {
 .content__people-card .social .icon {
     width: 50px;
     height: 50px;
+}
+
+.content__people-card .social .icon-copy {
+    font-size: 16px;
+    color: var(--color_main-light_0);
+    transition: 0.1s;
+}
+
+.content__people-card .button:hover .icon-copy {
+    color: var(--color__text_5);
 }
 
 /* CONTENT JOURNAL COMPONENT */
@@ -1477,6 +1486,17 @@ body.active {
 
 /* CONTENT PICTURE COMPONENT */
 
+.content__section__picture,
+.content__section .quote,
+.answer,
+.advertisement,
+.content__people-card,
+.content__section-journal,
+.appeal {
+    margin: 10px 0;
+}
+
+
 .content__section__picture {
     max-width: 100%;
     height: auto;
@@ -1488,12 +1508,12 @@ body.active {
 .content__section__picture img {
     max-width: 100% !important;
     height: auto;
+    border-radius: 15px;
 }
 
 /* CONTENT QUOTE COMPONENT */
 
 .content__section .quote {
-    margin: 40px 0;
     padding: 10px 20px;
     border-left: 2px solid var(--color_main-light_1);
 }
@@ -1791,7 +1811,6 @@ body.active {
     justify-content: start;
     align-items: start;
     flex-direction: column;
-    margin-bottom: 30px;
     border-radius: 15px;
 }
 
