@@ -1241,7 +1241,7 @@ body.active {
 .content-sidebar .item.active .head::before {
     transform: rotate(90deg);
     margin-top: 6px;
-    margin-left: 6px;
+    margin-left: 0;
 }
 
 .content-sidebar .children__item {

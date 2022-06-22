@@ -178,7 +178,7 @@ small,
 }
 
 .content__section ol li:nth-child(n+10) {
-    margin-left: 25px;
+    margin-left: 25px !important;
 }
 
 .content__section ol li,
@@ -189,6 +189,16 @@ small,
 .content__section ol li:last-child,
 .content__section ul li:last-child {
     margin-bottom: 0;
+}
+
+.content__section ol li,
+.content__section ul li {
+    font-family: "Exo 2";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 150%;
+    color: var(--color__text_2);
 }
 
 .content__section ul li {
