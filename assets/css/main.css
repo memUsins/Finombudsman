@@ -1195,7 +1195,28 @@ body.active {
 
 .content-sidebar .list .item {
     width: 100%;
+    position: relative;
 }
+
+/* Слово NEW */
+/* Чтобы прижать вправо - раскомментировать */
+/* .content-sidebar .list .item .newest {
+    position: absolute;
+    top: 0;
+    right: 0;
+} */
+
+/* .content-sidebar .list .item .newest span {
+    color: red;
+    font-weight: bold;
+} */
+
+/* Картинка "новое" */
+.content-sidebar .list .item .new-img {
+    width: 40px;
+    height: auto;
+}
+
 
 .content-sidebar .children__list {
     width: 100%;
@@ -1212,7 +1233,7 @@ body.active {
 }
 
 .content-sidebar .item .head {
-    display: flex;
+    display: inline-flex;
     justify-content: start;
     align-content: center;
     gap: 5px;
